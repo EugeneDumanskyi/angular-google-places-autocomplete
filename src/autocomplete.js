@@ -342,6 +342,7 @@ angular.module('google.places', [])
                 });
 
                 $scope.isOpen = function () {
+                    $scope.position = getDrawerPosition($scope.input);
                     return $scope.predictions.length > 0;
                 };
 
