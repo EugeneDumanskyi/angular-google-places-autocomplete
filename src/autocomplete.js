@@ -362,6 +362,12 @@ angular.module('google.places', [])
                     $scope.position = getDrawerPosition($scope.input);
                 });
 
+		$('.ngview > .background').scroll(function() {
+                    $scope.$apply(function () {
+                        $scope.position = getDrawerPosition($scope.input);
+                    });
+		});
+
                 function getDrawerPosition(element) {
                     var domEl = element[0],
                         rect = domEl.getBoundingClientRect(),
